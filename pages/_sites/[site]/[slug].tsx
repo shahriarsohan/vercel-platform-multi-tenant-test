@@ -1,20 +1,6 @@
-import remarkMdx from "remark-mdx";
-import { MDXRemote } from "next-mdx-remote";
-import { remark } from "remark";
-import { serialize } from "next-mdx-remote/serialize";
-import { useRouter } from "next/router";
-
-import BlogCard from "@/components/BlogCard";
-import BlurImage from "@/components/BlurImage";
-import Date from "@/components/Date";
-import Examples from "@/components/mdx/Examples";
-import Layout from "@/components/sites/Layout";
 import Loader from "@/components/sites/Loader";
-import Tweet from "@/components/mdx/Tweet";
-
-import type { AdjacentPost, Meta, _SiteSlugData } from "@/types";
 import type { GetStaticPaths, GetStaticProps } from "next";
-import type { MDXRemoteSerializeResult } from "next-mdx-remote";
+import { useRouter } from "next/router";
 import type { ParsedUrlQuery } from "querystring";
 
 interface PathProps extends ParsedUrlQuery {
@@ -36,7 +22,7 @@ export default function Post({
   const router = useRouter();
   if (router.isFallback) return <Loader />;
   console.log(stringifiedAdjacentPosts, stringifiedData, site);
-  return <h2>hello {site}</h2>;
+  return <h2>hello {site} this is shop area</h2>;
 }
 
 export const getStaticPaths: GetStaticPaths<PathProps> = async () => {

@@ -11,8 +11,7 @@ interface IndexProps {
 }
 
 const Test = ({ stringifiedData }: any) => {
-  console.log(stringifiedData);
-  return <div>Test</div>;
+  return <div>this is the shop {stringifiedData}</div>;
 };
 
 export default Test;
